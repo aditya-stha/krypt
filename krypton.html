@@ -1,0 +1,603 @@
+<!-- KRYPT Brand Book -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KRYPT — Brand Book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=DM+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@1,18,400&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    /* primary neutrals — the decor palette */
+    --bone:#F2EEE6;
+    --oat:#DED3C0;
+    --sand:#C9B79B;
+    --stone:#8C857A;
+    --graphite:#4B4A46;
+    --ink:#1C1B18;
+    /* product color-coding system */
+    --slate:#5C6670;
+    --sage:#9DA68D;
+    --clay:#B07A5B;
+    --mist:#C2C7C5;
+    /* the single CTA spark */
+    --amber:#B5793A;
+
+    --measure:66ch;
+    --serif:"Newsreader",Georgia,serif;
+    --sans:"Hanken Grotesk",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+    --mono:"DM Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans);
+    background:var(--bone);
+    color:var(--ink);
+    font-weight:400;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  ::selection{background:var(--ink);color:var(--bone)}
+
+  /* ---------- structure ---------- */
+  .wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 32px}
+  .section{padding:104px 0}
+  .section + .section{border-top:1px solid color-mix(in srgb,var(--ink) 9%,transparent)}
+  p{max-width:var(--measure)}
+  a{color:inherit}
+
+  /* utility / spec-readout voice */
+  .label{
+    font-family:var(--mono);
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--stone);
+  }
+  .pillar-eyebrow{display:flex;align-items:baseline;gap:14px;margin-bottom:22px}
+  .pillar-eyebrow .num{
+    font-family:var(--mono);font-size:13px;letter-spacing:.1em;color:var(--amber);
+  }
+  .pillar-eyebrow .rule{flex:1;height:1px;background:color-mix(in srgb,var(--ink) 14%,transparent)}
+
+  h1{font-weight:300;letter-spacing:.02em}
+  h2{
+    font-weight:500;font-size:clamp(28px,4.4vw,46px);
+    line-height:1.04;letter-spacing:-.018em;max-width:18ch;margin-bottom:20px;
+  }
+  h3{
+    font-weight:500;font-size:21px;letter-spacing:-.01em;margin-bottom:8px;
+  }
+  h4{font-weight:600;font-size:14px;letter-spacing:.02em;margin-bottom:6px}
+  .lead{font-size:clamp(19px,2vw,22px);line-height:1.5;color:var(--graphite);max-width:54ch}
+
+  .aside{
+    font-family:var(--serif);font-style:italic;font-size:clamp(22px,3vw,30px);
+    line-height:1.3;color:var(--graphite);max-width:24ch;
+  }
+
+  /* ---------- hero — the privacy viewing cone ---------- */
+  .hero{
+    position:relative;background:var(--ink);color:var(--bone);
+    min-height:92vh;display:flex;flex-direction:column;justify-content:space-between;
+    overflow:hidden;
+  }
+  /* micro-louvre texture nod to a real privacy filter */
+  .hero::before{
+    content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+    background:repeating-linear-gradient(90deg,
+      rgba(255,255,255,.018) 0 1px, transparent 1px 4px);
+  }
+  /* the viewing cone: clear in the centre, dark at the angles */
+  .hero::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(120% 90% at 50% 42%,
+      transparent 0%, transparent 34%,
+      rgba(28,27,24,.55) 64%, rgba(28,27,24,.92) 100%);
+  }
+  .hero-top,.hero-bottom{position:relative;z-index:2}
+  .hero-top{display:flex;justify-content:space-between;align-items:center;padding-top:34px}
+  .hero-mid{
+    position:relative;z-index:2;flex:1;display:flex;flex-direction:column;
+    justify-content:center;align-items:center;text-align:center;padding:48px 0;
+  }
+  .wordmark{
+    font-weight:300;letter-spacing:.34em;
+    font-size:clamp(54px,15vw,184px);line-height:.9;
+    padding-left:.34em; /* optical balance for tracking */
+    color:var(--bone);
+  }
+  .wordmark .glow{
+    text-shadow:0 0 38px rgba(242,238,230,.28);
+  }
+  .hero-tag{
+    font-family:var(--serif);font-style:italic;
+    font-size:clamp(20px,3vw,30px);color:color-mix(in srgb,var(--bone) 78%,transparent);
+    margin-top:26px;
+  }
+  .hero-sub{
+    margin-top:34px;max-width:46ch;color:color-mix(in srgb,var(--bone) 62%,transparent);
+    font-size:16px;
+  }
+  .hero-bottom{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    padding-bottom:34px;gap:24px;flex-wrap:wrap;
+  }
+  .hero .label{color:color-mix(in srgb,var(--bone) 50%,transparent)}
+  .hero-nav{display:flex;gap:26px;flex-wrap:wrap}
+  .hero-nav a{
+    font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    text-decoration:none;color:color-mix(in srgb,var(--bone) 64%,transparent);
+    border-bottom:1px solid transparent;padding-bottom:2px;transition:color .25s,border-color .25s;
+  }
+  .hero-nav a:hover,.hero-nav a:focus-visible{color:var(--bone);border-color:var(--amber)}
+
+  /* ---------- grids & cards ---------- */
+  .grid{display:grid;gap:1px;background:color-mix(in srgb,var(--ink) 10%,transparent);
+    border:1px solid color-mix(in srgb,var(--ink) 10%,transparent)}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g4{grid-template-columns:repeat(4,1fr)}
+  .cell{background:var(--bone);padding:30px}
+  .cell.dark{background:var(--graphite);color:var(--bone)}
+  .cell.dark .label{color:color-mix(in srgb,var(--bone) 55%,transparent)}
+
+  .split{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:56px;align-items:start}
+  .stack > * + *{margin-top:14px}
+
+  /* values / traits list */
+  .deflist{display:grid;gap:0}
+  .deflist .row{
+    display:grid;grid-template-columns:minmax(180px,260px) 1fr;gap:40px;
+    padding:26px 0;border-top:1px solid color-mix(in srgb,var(--ink) 12%,transparent);
+  }
+  .deflist .row:last-child{border-bottom:1px solid color-mix(in srgb,var(--ink) 12%,transparent)}
+  .deflist .term{font-weight:600;font-size:18px;letter-spacing:-.01em}
+  .deflist .term .k{font-family:var(--mono);font-size:12px;color:var(--amber);
+    display:block;letter-spacing:.1em;margin-bottom:8px}
+
+  .isnot{font-family:var(--mono);font-size:13px;color:var(--stone);margin-top:10px}
+  .isnot b{color:var(--ink);font-weight:500}
+
+  /* say / don't say */
+  .says{display:grid;grid-template-columns:1fr 1fr;gap:1px;
+    background:color-mix(in srgb,var(--ink) 10%,transparent);
+    border:1px solid color-mix(in srgb,var(--ink) 10%,transparent)}
+  .says > div{background:var(--bone);padding:24px 26px}
+  .says .ctx{grid-column:1 / -1;background:var(--oat);padding:14px 26px}
+  .says .ctx .label{color:var(--graphite)}
+  .says .yes::before,.says .no::before{
+    font-family:var(--mono);font-size:11px;letter-spacing:.14em;display:block;margin-bottom:10px;
+  }
+  .says .yes::before{content:"SAY THIS";color:var(--sage)}
+  .says .no::before{content:"NOT THIS";color:var(--clay)}
+  .says .yes p,.says .no p{font-size:16px;max-width:none}
+  .says .no p{color:var(--stone)}
+
+  /* color swatches */
+  .swatches{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+  .sw{display:flex;flex-direction:column}
+  .sw .chip{height:96px;border-radius:3px;border:1px solid rgba(0,0,0,.08)}
+  .sw .nm{font-weight:500;font-size:14px;margin-top:10px}
+  .sw .hx{font-family:var(--mono);font-size:11px;color:var(--stone);letter-spacing:.04em}
+  .sw .ro{font-size:12px;color:var(--graphite);margin-top:2px;line-height:1.35}
+
+  .products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .pcard{border:1px solid color-mix(in srgb,var(--ink) 12%,transparent);border-radius:4px;
+    overflow:hidden;background:var(--bone)}
+  .pcard .band{height:8px}
+  .pcard .body{padding:22px}
+  .pcard .dot{width:11px;height:11px;border-radius:50%;display:inline-block;margin-right:8px;
+    vertical-align:middle}
+  .pcard .nm{font-weight:600;font-size:16px}
+  .pcard .hx{font-family:var(--mono);font-size:11px;color:var(--stone);margin-top:4px}
+  .pcard p{font-size:14px;color:var(--graphite);margin-top:12px;max-width:none}
+
+  /* ratio bar */
+  .ratio{display:flex;height:46px;border-radius:4px;overflow:hidden;
+    border:1px solid color-mix(in srgb,var(--ink) 12%,transparent);margin-top:8px}
+  .ratio span{display:flex;align-items:center;justify-content:center;
+    font-family:var(--mono);font-size:11px;letter-spacing:.05em}
+
+  /* typography specimen */
+  .type-row{padding:26px 0;border-top:1px solid color-mix(in srgb,var(--ink) 12%,transparent);
+    display:grid;grid-template-columns:minmax(150px,200px) 1fr;gap:40px;align-items:baseline}
+  .type-row:last-child{border-bottom:1px solid color-mix(in srgb,var(--ink) 12%,transparent)}
+  .spec-display{font-weight:300;font-size:44px;letter-spacing:.16em;line-height:1}
+  .spec-h{font-weight:500;font-size:30px;letter-spacing:-.018em;line-height:1.05}
+  .spec-sub{font-weight:500;font-size:20px}
+  .spec-body{font-weight:400;font-size:17px;line-height:1.6;color:var(--graphite)}
+  .spec-mono{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;font-size:13px;color:var(--stone)}
+  .spec-serif{font-family:var(--serif);font-style:italic;font-size:24px;color:var(--graphite)}
+
+  /* logo do / dont */
+  .logobox{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;
+    border:1px solid color-mix(in srgb,var(--ink) 12%,transparent);border-radius:4px;
+    position:relative;overflow:hidden}
+  .logobox .mk{font-weight:300;letter-spacing:.3em;font-size:26px;padding-left:.3em}
+  .logobox .tag-do,.logobox .tag-no{position:absolute;top:12px;left:12px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.12em}
+  .logobox .tag-do{color:var(--sage)}
+  .logobox .tag-no{color:var(--clay)}
+  .b-stretch .mk{transform:scaleX(1.7);letter-spacing:.05em}
+  .b-amber{background:var(--amber)}
+  .b-amber .mk{color:var(--bone)}
+  .b-busy{background:linear-gradient(115deg,var(--clay),var(--slate),var(--sage))}
+  .b-busy .mk{color:#fff}
+  .b-shadow .mk{text-shadow:3px 4px 0 rgba(0,0,0,.4),0 0 14px rgba(0,0,0,.3)}
+  .clearspace{outline:1px dashed var(--stone);outline-offset:18px}
+
+  /* the live privacy-reveal — signature interaction */
+  .reveal{
+    position:relative;border-radius:6px;overflow:hidden;background:var(--ink);
+    color:var(--bone);padding:46px 40px;cursor:pointer;
+  }
+  .reveal .content{position:relative;z-index:1;transition:filter .55s ease, opacity .55s ease}
+  .reveal .veil{
+    position:absolute;inset:0;z-index:2;pointer-events:none;
+    background:linear-gradient(105deg,rgba(28,27,24,.96) 18%,rgba(28,27,24,.35) 50%,rgba(28,27,24,.96) 82%);
+    transition:opacity .55s ease;
+  }
+  .reveal .content{filter:blur(7px);opacity:.55}
+  .reveal:hover .content,.reveal:focus-within .content{filter:blur(0);opacity:1}
+  .reveal:hover .veil,.reveal:focus-within .veil{opacity:0}
+  .reveal .hint{
+    position:absolute;bottom:14px;right:18px;z-index:3;
+    font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:color-mix(in srgb,var(--bone) 55%,transparent);
+  }
+  .reveal .big{font-weight:300;letter-spacing:.04em;font-size:clamp(22px,3vw,34px);line-height:1.2;max-width:22ch}
+
+  /* footer */
+  .foot{background:var(--ink);color:var(--bone);padding:80px 0}
+  .foot .wordmark{font-size:clamp(44px,9vw,96px);text-align:left;padding-left:.34em}
+  .foot .label{color:color-mix(in srgb,var(--bone) 45%,transparent)}
+  .foot p{color:color-mix(in srgb,var(--bone) 60%,transparent)}
+
+  :focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:2px}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:860px){
+    .swatches{grid-template-columns:repeat(3,1fr)}
+    .products{grid-template-columns:repeat(2,1fr)}
+    .g4{grid-template-columns:repeat(2,1fr)}
+    .g3{grid-template-columns:1fr}
+    .split{grid-template-columns:1fr;gap:28px}
+    .deflist .row,.type-row{grid-template-columns:1fr;gap:10px}
+    .section{padding:72px 0}
+  }
+  @media (max-width:560px){
+    .swatches{grid-template-columns:repeat(2,1fr)}
+    .products,.g2,.says{grid-template-columns:1fr}
+    .says .ctx{grid-column:1}
+    .wrap{padding:0 22px}
+    body{font-size:16px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto}
+    .reveal .content{transition:none}
+    .reveal .veil{transition:none}
+  }
+</style>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap hero-top">
+    <span class="label">Brand Book</span>
+    <span class="label">v1.0 · Internal</span>
+  </div>
+
+  <div class="wrap hero-mid">
+    <div class="wordmark glow">KRYPT</div>
+    <div class="hero-tag">Yours to see.</div>
+    <p class="hero-sub">Premium anti-reflective and privacy glass for iPhone and high-end Android — engineered for true clarity, designed to sit as beautifully on your desk as on your phone.</p>
+  </div>
+
+  <div class="wrap hero-bottom">
+    <span class="label">Strategy · Voice · Aesthetic · Execution</span>
+    <nav class="hero-nav" aria-label="Sections">
+      <a href="#strategy">01 Strategy</a>
+      <a href="#voice">02 Voice</a>
+      <a href="#aesthetic">03 Aesthetic</a>
+      <a href="#execution">04 Execution</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ 01 STRATEGY ============ -->
+<section class="section" id="strategy">
+  <div class="wrap">
+    <div class="pillar-eyebrow"><span class="num">01</span><span class="label">Brand Strategy — the foundation</span><span class="rule"></span></div>
+    <h2>A glance should belong to the person who casts it.</h2>
+    <p class="lead">Most of the category sells fear: hackers, snoops, the stranger reading over your shoulder. KRYPT sells the opposite — the calm, ordinary dignity of looking at your own screen without being looked at. That single belief drives every decision below.</p>
+
+    <div style="margin-top:56px" class="split">
+      <div><span class="label">Purpose · why we exist</span></div>
+      <div class="stack">
+        <h3>Beyond making money</h3>
+        <p>The screen is the most intimate window into a person's life — their messages, money, photographs, half-formed thoughts. The world has quietly turned every one of those screens into a billboard for whoever sits beside us. KRYPT exists to give that private space back. We are not in the business of selling glass; we are in the business of defending the small, daily right to look without being seen.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:8px" class="split">
+      <div><span class="label">Mission · the change today</span></div>
+      <div class="stack">
+        <h3>Make privacy the default texture of personal tech</h3>
+        <p>Privacy today is sold as armour — black, defensive, a little paranoid. Our mission is to make it something people actually want, not just tolerate: glass so optically pure that protecting your screen never costs you clarity, and concealment so well-designed that owning your privacy feels like good taste rather than self-defence.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:8px" class="split">
+      <div><span class="label">Vision · 5–10 years</span></div>
+      <div class="stack">
+        <h3>"Krypt" becomes a personal privacy standard</h3>
+        <p>We want people to reach for KRYPT the way they reach for a good case — assumed, trusted, a little coveted. Glass is the beginning. The horizon is a small, coherent family of objects that share one idea: privacy you can see and feel, designed like furniture rather than gear. We picture a community that treats its own attention as something worth protecting — and treats protection as something worth designing well.</p>
+        <p class="aside" style="margin-top:24px">Privacy you'd actually want on display.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:64px;margin-bottom:6px">Core values</h3>
+    <p class="label">How each one shows up in real work</p>
+    <div class="deflist" style="margin-top:24px">
+      <div class="row">
+        <div class="term"><span class="k">VALUE 01</span>Privacy is a posture, not a panic</div>
+        <div><p style="max-width:none">We never sell through surveillance horror or fear — we sell through dignity and design. In practice, every ad, box, and headline frames privacy as calm and confident, and we kill any creative that leans on a "someone is watching you" scare.</p></div>
+      </div>
+      <div class="row">
+        <div class="term"><span class="k">VALUE 02</span>Clarity is non-negotiable</div>
+        <div><p style="max-width:none">A privacy layer that dims, distorts, or rainbows the screen has failed, full stop. Every product ships only after passing the internal optical bar — "would we run this on our own phones for a month?" — and we publish our real light-transmittance and haze numbers instead of hiding them.</p></div>
+      </div>
+      <div class="row">
+        <div class="term"><span class="k">VALUE 03</span>Make it decor, not gear</div>
+        <div><p style="max-width:none">The category defaults to black plastic and tactical cues; we refuse them. Every product, color, and insert is designed to look at home on a linen-topped desk or a marble shelf, and our color system is built to be coordinated with a room — not a gadget bag.</p></div>
+      </div>
+      <div class="row">
+        <div class="term"><span class="k">VALUE 04</span>Honest by construction</div>
+        <div><p style="max-width:none">We'd rather under-claim and over-deliver than market our way past the truth. Install guides admit what's genuinely fiddly, support tells a customer when a cheaper fix will do, and we never retouch the privacy effect to look stronger than the physics allows.</p></div>
+      </div>
+    </div>
+
+    <div style="margin-top:64px" class="grid g2">
+      <div class="cell dark">
+        <span class="label">Value proposition</span>
+        <p style="font-size:22px;line-height:1.4;margin-top:18px;max-width:none;color:var(--bone)">KRYPT makes privacy you'd actually want on display: premium anti-reflective and privacy glass engineered for true, undimmed clarity — and built to sit as beautifully on your desk as it does on your phone.</p>
+      </div>
+      <div class="cell">
+        <span class="label">Why the audience cares</span>
+        <p style="margin-top:18px;max-width:none">Our people — iPhone and high-end Android owners, tech-fluent and taste-driven — already pay for things that are quietly excellent. They don't want a cheaper film; they want the version that respects both their eyes and their shelf. KRYPT is the only privacy glass that treats clarity and design as non-negotiable at the same time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 VOICE ============ -->
+<section class="section" id="voice">
+  <div class="wrap">
+    <div class="pillar-eyebrow"><span class="num">02</span><span class="label">Personality &amp; Verbal Identity — the voice</span><span class="rule"></span></div>
+    <h2>Quietly exacting. We let the product do the shouting — by not shouting.</h2>
+    <p class="lead">KRYPT speaks like a person with real taste and nothing to prove: precise, warm, and never anxious. If a sentence feels like it's trying too hard, it isn't ours.</p>
+
+    <h3 style="margin-top:56px;margin-bottom:6px">Personality traits</h3>
+    <p class="label">Four words, each with the line it must never cross</p>
+    <div class="deflist" style="margin-top:24px">
+      <div class="row">
+        <div class="term"><span class="k">TRAIT 01</span>QUIETLY EXACTING</div>
+        <div><p style="max-width:none">We care about the half-millimetre and the exact word, and it shows in how specific we are.<span class="isnot"><br>We are <b>precise</b>, but not <b>preachy</b> — we demonstrate the detail, we don't lecture about it.</span></p></div>
+      </div>
+      <div class="row">
+        <div class="term"><span class="k">TRAIT 02</span>WARMLY MINIMAL</div>
+        <div><p style="max-width:none">We edit ruthlessly down to what matters, then leave the warmth in.<span class="isnot"><br>We are <b>spare</b>, but not <b>cold</b> — minimal is a kindness to the reader, never a pose.</span></p></div>
+      </div>
+      <div class="row">
+        <div class="term"><span class="k">TRAIT 03</span>DISCREETLY CONFIDENT</div>
+        <div><p style="max-width:none">We know the product is very good, so we can afford to be calm about it.<span class="isnot"><br>We are <b>assured</b>, but not <b>boastful</b> — confidence is shown in restraint, not superlatives.</span></p></div>
+      </div>
+      <div class="row">
+        <div class="term"><span class="k">TRAIT 04</span>CALMLY PROTECTIVE</div>
+        <div><p style="max-width:none">We are unmistakably on the customer's side, guarding what's theirs.<span class="isnot"><br>We are <b>protective</b>, but not <b>paranoid</b> — we offer safety, never sell anxiety.</span></p></div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:64px;margin-bottom:6px">Tone of voice</h3>
+    <p class="label">One personality, dialled by touchpoint</p>
+    <div class="grid g3" style="margin-top:24px">
+      <div class="cell"><h4>Marketing &amp; site</h4><p style="font-size:15px;max-width:none;color:var(--graphite)">Spare and sensory. Short, concrete sentences. One idea per line. Confidence through specificity, never through volume or capital letters.</p></div>
+      <div class="cell"><h4>Packaging &amp; install</h4><p style="font-size:15px;max-width:none;color:var(--graphite)">Calm, encouraging instruction with a touch of warmth. The box coaches you and reassures you it's fine to lift and retry. Plain verbs, no jargon.</p></div>
+      <div class="cell"><h4>Support</h4><p style="font-size:15px;max-width:none;color:var(--graphite)">Human and plainspoken. Fix first, explain second, cite policy last (if ever). Speak the way a thoughtful friend who happens to be an expert would.</p></div>
+    </div>
+
+    <h3 style="margin-top:48px;margin-bottom:18px">Say this / Not this</h3>
+    <div class="says">
+      <div class="ctx"><span class="label">Marketing headline</span></div>
+      <div class="yes"><p>Clear to you. Closed to everyone else.</p></div>
+      <div class="no"><p>STOP hackers &amp; snoops from STEALING your private data — before it's too late!!!</p></div>
+
+      <div class="ctx"><span class="label">Product benefit</span></div>
+      <div class="yes"><p>Anti-glare you can actually read in direct sunlight.</p></div>
+      <div class="no"><p>Revolutionary military-grade nano-tech glare-defeating optical system.</p></div>
+
+      <div class="ctx"><span class="label">Customer support</span></div>
+      <div class="yes"><p>That bubble's annoying — here's the two-minute fix, and a fresh one is already on its way if it doesn't lift.</p></div>
+      <div class="no"><p>Per our policy, damage resulting from installation error is not covered under warranty.</p></div>
+    </div>
+
+    <h3 style="margin-top:64px;margin-bottom:6px">Core messaging pillars</h3>
+    <p class="label">Three narratives we return to, everywhere</p>
+    <div class="grid g3" style="margin-top:24px">
+      <div class="cell">
+        <span class="label" style="color:var(--amber)">PILLAR A</span>
+        <h3 style="margin-top:14px">Clarity without compromise</h3>
+        <p style="font-size:15px;max-width:none;color:var(--graphite)">The optics story. Privacy and anti-glare that don't dim, distort, or dull the display. Lead with what the eye notices: true color, real sunlight legibility, no rainbow haze.</p>
+      </div>
+      <div class="cell">
+        <span class="label" style="color:var(--amber)">PILLAR B</span>
+        <h3 style="margin-top:14px">Privacy as dignity</h3>
+        <p style="font-size:15px;max-width:none;color:var(--graphite)">The why-it-matters story. Owning your attention is a calm, everyday right — not a reaction to threat. We frame it through ordinary moments: a train, a café, a shared desk.</p>
+      </div>
+      <div class="cell">
+        <span class="label" style="color:var(--amber)">PILLAR C</span>
+        <h3 style="margin-top:14px">An object, not a gadget</h3>
+        <p style="font-size:15px;max-width:none;color:var(--graphite)">The taste story. The color system, the materials, the desk-worthy box. KRYPT is designed to be seen — the rare accessory you'd happily leave out on the table.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 AESTHETIC ============ -->
+<section class="section" id="aesthetic">
+  <div class="wrap">
+    <div class="pillar-eyebrow"><span class="num">03</span><span class="label">Visual Identity — the aesthetic</span><span class="rule"></span></div>
+    <h2>Built like home decor, engineered like an instrument.</h2>
+    <p class="lead">Warm neutrals you'd choose for a room, the discipline of an architect's drawing, and exactly one warm spark — reserved entirely for the moment we ask you to act.</p>
+
+    <!-- LOGO -->
+    <h3 style="margin-top:56px;margin-bottom:6px">Logo</h3>
+    <p class="label">Wordmark · monogram · rules</p>
+    <div class="grid g2" style="margin-top:24px">
+      <div class="cell" style="display:flex;flex-direction:column;justify-content:center;align-items:center;background:var(--oat);min-height:220px">
+        <div class="clearspace" style="font-weight:300;letter-spacing:.32em;font-size:40px;padding-left:.32em;color:var(--ink)">KRYPT</div>
+        <span class="label" style="margin-top:34px">Clear space = cap-height of the “K”, all sides</span>
+      </div>
+      <div class="cell stack">
+        <h4>Construction</h4>
+        <p style="font-size:15px;max-width:none;color:var(--graphite)">The wordmark is KRYPT set in our display sans, Light weight, in capitals with generous tracking (+0.30–0.34em) — it should read like the name embossed on good stationery, not a tech logotype. The monogram “K”, optically centered, serves app icons and favicons.</p>
+        <h4 style="margin-top:18px">Minimum size &amp; placement</h4>
+        <p style="font-size:15px;max-width:none;color:var(--graphite)">Never below 16px digital cap-height (≈14mm print) or the tracking collapses. Prefer top-left or centered, always with at least one cap-height of air around it. Let it breathe — crowding the mark is the most common mistake.</p>
+      </div>
+    </div>
+
+    <p class="label" style="margin-top:36px;display:block">Critical “do nots”</p>
+    <div class="grid g4" style="margin-top:14px">
+      <div class="cell" style="padding:16px"><div class="logobox b-stretch"><span class="tag-no">DON’T STRETCH</span><span class="mk">KRYPT</span></div></div>
+      <div class="cell" style="padding:16px"><div class="logobox b-amber"><span class="tag-no" style="color:var(--bone)">DON’T USE AMBER</span><span class="mk">KRYPT</span></div></div>
+      <div class="cell" style="padding:16px"><div class="logobox b-busy"><span class="tag-no" style="color:#fff">DON’T ON BUSY ART</span><span class="mk">KRYPT</span></div></div>
+      <div class="cell" style="padding:16px"><div class="logobox b-shadow"><span class="tag-no">DON’T ADD EFFECTS</span><span class="mk">KRYPT</span></div></div>
+    </div>
+    <p style="font-size:14px;color:var(--stone);max-width:none;margin-top:14px">Also never: condense or re-letterspace, recolor outside Ink / Bone / a single approved neutral, fill the mark with the amber accent, apply gradients, shadows, outlines or bevels, rotate it, or rebuild it in another typeface.</p>
+
+    <!-- COLOR -->
+    <h3 style="margin-top:64px;margin-bottom:6px">Color — primary neutrals</h3>
+    <p class="label">The decor palette: warm beige into cool gray</p>
+    <div class="swatches" style="margin-top:24px">
+      <div class="sw"><div class="chip" style="background:var(--bone)"></div><div class="nm">Bone</div><div class="hx">#F2EEE6</div><div class="ro">Paper &amp; backgrounds</div></div>
+      <div class="sw"><div class="chip" style="background:var(--oat)"></div><div class="nm">Oat</div><div class="hx">#DED3C0</div><div class="ro">Primary beige · soft fields</div></div>
+      <div class="sw"><div class="chip" style="background:var(--sand)"></div><div class="nm">Sand</div><div class="hx">#C9B79B</div><div class="ro">Deeper beige · blocks</div></div>
+      <div class="sw"><div class="chip" style="background:var(--stone)"></div><div class="nm">Stone</div><div class="hx">#8C857A</div><div class="ro">Captions · secondary text</div></div>
+      <div class="sw"><div class="chip" style="background:var(--graphite)"></div><div class="nm">Graphite</div><div class="hx">#4B4A46</div><div class="ro">Structure · dark panels</div></div>
+      <div class="sw"><div class="chip" style="background:var(--ink)"></div><div class="nm">Ink</div><div class="hx">#1C1B18</div><div class="ro">Body text · the wordmark</div></div>
+    </div>
+
+    <h3 style="margin-top:48px;margin-bottom:6px">Color — product coding system</h3>
+    <p class="label">Each product owns one decor-grade color, end to end</p>
+    <p style="font-size:15px;max-width:none;margin-top:14px;color:var(--graphite)">The same color appears on the box spine, the install card, the pull-tab dot on the glass, and the product page accent. Goal: a customer can glance at a shelf — or their own drawer — and know exactly which KRYPT is which, without reading a word.</p>
+    <div class="products" style="margin-top:24px">
+      <div class="pcard"><div class="band" style="background:var(--slate)"></div><div class="body"><span class="dot" style="background:var(--slate)"></span><span class="nm">Privacy</span><div class="hx">Slate · #5C6670</div><p>The flagship privacy glass. Cool and discreet — the color of "dark from the side."</p></div></div>
+      <div class="pcard"><div class="band" style="background:var(--sage)"></div><div class="body"><span class="dot" style="background:var(--sage)"></span><span class="nm">Anti-Reflective</span><div class="hx">Sage · #9DA68D</div><p>The matte, no-glare glass. Calm and easy on the eyes — the color of rest.</p></div></div>
+      <div class="pcard"><div class="band" style="background:var(--clay)"></div><div class="body"><span class="dot" style="background:var(--clay)"></span><span class="nm">Total</span><div class="hx">Clay · #B07A5B</div><p>Privacy + anti-reflective in one. Warm and premium — the color of the top tier.</p></div></div>
+      <div class="pcard"><div class="band" style="background:var(--mist)"></div><div class="body"><span class="dot" style="background:var(--mist)"></span><span class="nm">Crystal</span><div class="hx">Mist · #C2C7C5</div><p>Maximum-clarity protection, no privacy filter. Pale and open — the color of pure glass.</p></div></div>
+    </div>
+
+    <h3 style="margin-top:48px;margin-bottom:6px">Color — accent &amp; balance</h3>
+    <p class="label">One spark, strict ratio</p>
+    <div class="grid g2" style="margin-top:24px">
+      <div class="cell stack">
+        <div class="chip" style="background:var(--amber);height:70px;border-radius:3px"></div>
+        <div class="nm" style="font-weight:600;margin-top:12px">Amber — #B5793A</div>
+        <p style="font-size:15px;max-width:none;color:var(--graphite)">The only warm spark in a neutral world. Reserved exclusively for primary actions — Add to bag, Buy, a single key link. Never a background wash, never decoration, never inside the logo. Its scarcity is what makes it work.</p>
+      </div>
+      <div class="cell">
+        <h4>Usage ratio</h4>
+        <div class="ratio">
+          <span style="background:var(--bone);color:var(--ink);flex:60">60% NEUTRALS</span>
+          <span style="background:var(--graphite);color:var(--bone);flex:30">30% INK</span>
+          <span style="background:var(--clay);color:var(--bone);flex:8">8% PRODUCT</span>
+          <span style="background:var(--amber);color:var(--bone);flex:2">2%</span>
+        </div>
+        <p style="font-size:14px;color:var(--stone);max-width:none;margin-top:14px">Roughly 60% bone &amp; beige, 30% graphite/ink for text and structure, ~8% product color in context, and under 2% amber. If amber appears more than once on a screen, something is wrong.</p>
+      </div>
+    </div>
+
+    <!-- TYPOGRAPHY -->
+    <h3 style="margin-top:64px;margin-bottom:6px">Typography</h3>
+    <p class="label">Clean grotesque · monospace spec voice · serif aside</p>
+    <div style="margin-top:8px">
+      <div class="type-row"><span class="spec-mono">Display / Wordmark</span><div><div class="spec-display">KRYPT</div><p style="font-size:14px;color:var(--stone);max-width:none;margin-top:10px">Hanken Grotesk Light · caps · tracking +0.30em. <em>Fallbacks: Helvetica Now, Inter.</em></p></div></div>
+      <div class="type-row"><span class="spec-mono">Heading H2</span><div><div class="spec-h">Clear to you.<br>Closed to everyone else.</div><p style="font-size:14px;color:var(--stone);max-width:none;margin-top:10px">Hanken Grotesk Medium · sentence case · tracking −0.018em · line-height 1.04.</p></div></div>
+      <div class="type-row"><span class="spec-mono">Subheading H3</span><div><div class="spec-sub">Anti-glare you can read in sunlight</div><p style="font-size:14px;color:var(--stone);max-width:none;margin-top:10px">Hanken Grotesk Medium · 20–21px · normal tracking.</p></div></div>
+      <div class="type-row"><span class="spec-mono">Body</span><div><div class="spec-body">Body is set in the same family, Regular, 16–18px, line-height ~1.6, on a comfortable 60–75 character measure. Never justified. Never letterspaced when lowercase.</div></div></div>
+      <div class="type-row"><span class="spec-mono">Utility / spec</span><div><div class="spec-mono">LIGHT TRANSMITTANCE · 91% · HAZE 0.4%</div><p style="font-size:14px;color:var(--stone);max-width:none;margin-top:10px">DM Mono · uppercase · tracking +0.14em. The honest-numbers voice — labels, specs, hex codes, eyebrows.</p></div></div>
+      <div class="type-row"><span class="spec-mono">Editorial aside</span><div><div class="spec-serif">Privacy you'd actually want on display.</div><p style="font-size:14px;color:var(--stone);max-width:none;margin-top:10px">Newsreader Italic · used sparingly for a single pull-line — never for body. <em>One serif moment per page, maximum.</em></p></div></div>
+    </div>
+    <p style="font-size:14px;color:var(--stone);max-width:none;margin-top:18px">Rules of thumb: no more than two weights per layout · sentence case everywhere except mono labels (uppercase) and the wordmark · the mono face is how we sound precise, the serif is how we sound human — use each rarely enough to keep it meaningful.</p>
+
+    <!-- IMAGERY -->
+    <h3 style="margin-top:64px;margin-bottom:6px">Imagery &amp; art direction</h3>
+    <p class="label">Warm daylight · real materials · honest optics</p>
+    <div class="grid g2" style="margin-top:24px">
+      <div class="cell stack">
+        <h4>Shoot like this</h4>
+        <p style="font-size:15px;max-width:none;color:var(--graphite)">Soft directional daylight — window light, late afternoon. The phone photographed as an object among home and office things: oak, linen, travertine, plaster, a stoneware mug, a paperback, a pair of glasses. People shown candid and relaxed — hands and posture over faces, privacy as everyday calm (a train, a café, a shared desk). Show the privacy effect honestly: one scene, two angles, crisp head-on and naturally darkened from the side. Generous negative space; one hero object per frame, placed off-center.</p>
+      </div>
+      <div class="cell stack">
+        <h4>Never this</h4>
+        <p style="font-size:15px;max-width:none;color:var(--graphite)">Sterile blue-lit "tech" stock. Glowing circuit boards, HUDs, padlock clipart, binary-code rain. Hooded-hacker imagery or any fear cue. Hard studio-black product voids, lens flares, neon. And never fake the privacy effect to look darker or stronger than the glass actually performs — honesty is part of the picture.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 EXECUTION ============ -->
+<section class="section" id="execution">
+  <div class="wrap">
+    <div class="pillar-eyebrow"><span class="num">04</span><span class="label">Brand Alignment &amp; Touchpoints — the execution</span><span class="rule"></span></div>
+    <h2>Every touch should leave someone calmer than it found them.</h2>
+
+    <!-- the signature interaction -->
+    <div class="reveal" tabindex="0" role="img" aria-label="A privacy-glass demonstration: the message is obscured until viewed head-on. It reads: This is how it should feel. Clear when it's yours to read, closed when it isn't.">
+      <span class="label" style="color:color-mix(in srgb,var(--bone) 55%,transparent);position:relative;z-index:3">The CX feeling, made literal</span>
+      <div class="content">
+        <p class="big" style="margin-top:18px;color:var(--bone)">This is how it should feel. Clear when it's yours to read — closed the instant it isn't.</p>
+      </div>
+      <div class="veil"></div>
+      <span class="hint">Hover or focus to view head-on →</span>
+    </div>
+
+    <div class="grid g2" style="margin-top:56px">
+      <div class="cell stack">
+        <span class="label">Customer experience philosophy</span>
+        <h3 style="margin-top:14px">Handled by someone with taste and no agenda</h3>
+        <p style="font-size:15px;max-width:none;color:var(--graphite)">The whole arc should feel like being looked after by an expert who isn't trying to sell you anything more. Pre-purchase is honest comparison — real numbers, no fake countdowns, no dark patterns. The box itself coaches the install (dust stickers, an alignment frame, a quiet "it's fine to lift and retry"). Afterward we check in and replace a bubbled fit, free. Support resolves before it explains policy.</p>
+        <p style="font-size:15px;max-width:none;color:var(--graphite);margin-top:8px"><strong>North star:</strong> every interaction should feel like a small, quiet upgrade to the customer's day — never a transaction that demands their attention. The feeling we engineer for, in three words: <em>these people respect me.</em></p>
+      </div>
+      <div class="cell stack">
+        <span class="label">Employer brand</span>
+        <h3 style="margin-top:14px">We hire for taste, honesty, and craft — over hype</h3>
+        <p style="font-size:15px;max-width:none;color:var(--graphite)">Internally the values become operating rules. Designers get the time to sweat the box, not just the ad. Engineers are empowered to kill a product that misses the optical bar even when it's ready to ship. Support is measured on resolution and warmth, not call time.</p>
+        <p style="font-size:15px;max-width:none;color:var(--graphite);margin-top:8px">Hiring favors work-samples over pedigree — "show us one thing you made better than it needed to be." Job posts are written in brand voice: calm, specific, no "rockstar ninja." And we celebrate the person who caught the haze defect as loudly as the one who shipped the launch. The studio itself should look like the brand: neutral, warm, considered.</p>
+      </div>
+    </div>
+
+    <div class="grid g3" style="margin-top:1px">
+      <div class="cell"><span class="label" style="color:var(--amber)">DO</span><p style="font-size:15px;max-width:none;color:var(--graphite);margin-top:10px">Default to honesty in specs, install difficulty, and what a product can't do. Trust compounds.</p></div>
+      <div class="cell"><span class="label" style="color:var(--amber)">DO</span><p style="font-size:15px;max-width:none;color:var(--graphite);margin-top:10px">Treat the unboxing like opening eyewear or stationery — not an electronics blister pack.</p></div>
+      <div class="cell"><span class="label" style="color:var(--clay)">DON’T</span><p style="font-size:15px;max-width:none;color:var(--graphite);margin-top:10px">Reach for urgency, scarcity timers, fear, or the amber accent to manufacture a click.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="wordmark">KRYPT</div>
+    <p style="margin-top:18px;max-width:46ch">Yours to see. Premium anti-reflective and privacy glass — clear when it's yours to read, closed when it isn't.</p>
+    <div style="margin-top:40px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap">
+      <span class="label">Brand Book · v1.0</span>
+      <span class="label">Strategy · Voice · Aesthetic · Execution</span>
+    </div>
+  </div>
+</footer>
